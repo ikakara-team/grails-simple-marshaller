@@ -14,14 +14,13 @@
  */
 package ikakara.simplemarshaller.test
 
-import ikakara.simplemarshaller.annotation.SimpleMarshaller;
+import ikakara.simplemarshaller.annotation.SimpleMarshaller
 
 /**
- *
  * @author Allen
  */
 @SimpleMarshaller(includes=["strName","iNumber"])
 class AnnotatedGroovyClass {
-  String strName;
-  int iNumber;
+  String strName
+  int iNumber
 }
