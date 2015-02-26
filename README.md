@@ -75,7 +75,7 @@ grails {
 }
 ```
 
-Plugin Developers can register their classes in <Your>GrailsPlugin.groovy
+Plugin Developers can register their classes in {{Your}}GrailsPlugin.groovy
 ```
   import ikakara.simplemarshaller.web.app.SimpleMarshallerService
 
