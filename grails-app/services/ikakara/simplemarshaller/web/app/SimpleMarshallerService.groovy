@@ -14,29 +14,29 @@
  */
 package ikakara.simplemarshaller.web.app
 
-import grails.transaction.Transactional
-
+import grails.converters.JSON
+import grails.converters.XML
 import ikakara.simplemarshaller.annotation.SimpleMarshaller
 import ikakara.simplemarshaller.util.CollectionUtil
 
-@Transactional
 class SimpleMarshallerService {
 
-  def register(Class clazz) {
-    SimpleMarshaller sm =  clazz.getAnnotation(SimpleMarshaller.class);
-    if(sm) {
-      String[] includes = sm.includes();
-      Set properties = CollectionUtil.buildHashSet(includes)
+  static transactional = false
 
-      grails.converters.JSON.registerObjectMarshaller(clazz) {
-        // filter the key-value pairs to output:
-        return it.properties.findAll { k,v -> properties.contains(k); }
-      }
-
-      grails.converters.XML.registerObjectMarshaller(clazz) {
-        // filter the key-value pairs to output:
-        return it.properties.findAll { k,v -> properties.contains(k); }
-      }
+  void register(Class clazz) {
+    SimpleMarshaller sm =  clazz.getAnnotation(SimpleMarshaller)
+    if (!sm) {
+      return
     }
+
+    Set properties = CollectionUtil.buildHashSet(sm.includes())
+
+    def converter = {
+      // filter the key-value pairs to output:
+      return it.properties.findAll { k,v -> properties.contains(k) }
+    }
+
+    JSON.registerObjectMarshaller(clazz, converter)
+    XML.registerObjectMarshaller(clazz, converter)
   }
 }

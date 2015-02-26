@@ -14,29 +14,21 @@
  */
 package ikakara.simplemarshaller.util;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 /**
- *
  * @author Allen
  */
 public class CollectionUtil {
 
   public static <T> Set<T> buildHashSet(T... objs) {
-    Set<T> set = new HashSet<T>();
-    for (T o : objs) {
-      set.add(o);
-    }
-    return set;
+    return buildHashSet(Arrays.asList(objs));
   }
 
   public static <T> Set<T> buildHashSet(List<T> list) {
-    Set<T> set = new HashSet<T>();
-    for (T o : list) {
-      set.add(o);
-    }
-    return set;
+    return new HashSet<T>(list);
   }
 }

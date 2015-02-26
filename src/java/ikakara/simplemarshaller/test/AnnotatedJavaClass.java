@@ -17,7 +17,6 @@ package ikakara.simplemarshaller.test;
 import ikakara.simplemarshaller.annotation.SimpleMarshaller;
 
 /**
- *
  * @author Allen
  */
 @SimpleMarshaller(includes={"strName","iNumber"})

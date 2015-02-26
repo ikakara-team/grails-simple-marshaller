@@ -21,8 +21,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Annotation to mark a class to customize object marshalling for JSON and XML.
- *
+ * Marks a class to customize object marshalling for JSON and XML.
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
@@ -30,9 +29,8 @@ import java.lang.annotation.Target;
 public @interface SimpleMarshaller {
 
   /**
-   * List of properties to include in object marshalling.
-   * @return 
+   * Properties to include in object marshalling.
+   * @return the properties
    */
   String[] includes();
-
 }
