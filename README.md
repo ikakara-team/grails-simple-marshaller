@@ -94,7 +94,7 @@ Plugin Developers can register their classes in {{Your}}GrailsPlugin.groovy
 
 Copyright & License:
 --------------
-Copyright 2014 Allen Arakaki.  All Rights Reserved.
+Copyright 2014-2015 Allen Arakaki.  All Rights Reserved.
 
 ```
 Apache 2 License - http://www.apache.org/licenses/LICENSE-2.0
