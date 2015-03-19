@@ -1,7 +1,7 @@
 import ikakara.simplemarshaller.web.app.SimpleMarshallerService
 
 class SimpleMarshallerGrailsPlugin {
-  def version = "0.1"
+  def version = "0.1.1"
   def grailsVersion = "2.0 > *"
   def pluginExcludes = [
     "**/test/**"
@@ -35,7 +35,5 @@ class SimpleMarshallerGrailsPlugin {
   def afterConfigMerge = { config, ctx ->
     // let's put the mergedConfig in ctx
     ctx.appConfig.grails.plugin.simplemarshaller.putAll(config.grails.plugin.simplemarshaller)
-
-    ctx.grailsApplication.config.grails.plugin.simplemarshaller.each { println "SimpleMarshaller afterConfigMerge $it" }
   }
 }
