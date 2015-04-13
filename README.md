@@ -102,6 +102,8 @@ Apache 2 License - http://www.apache.org/licenses/LICENSE-2.0
 
 History:
 --------------
+```
 0.1.2 - fix plugin startup
 0.1.1 - cleanup println
 0.1   - initial checkin
+```
