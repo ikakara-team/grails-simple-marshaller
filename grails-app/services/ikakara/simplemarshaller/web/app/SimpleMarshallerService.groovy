@@ -24,10 +24,14 @@ class SimpleMarshallerService {
   static transactional = false
 
   void register(Class clazz) {
+    log.debug ("Register ${clazz}")
+
     SimpleMarshaller sm =  clazz.getAnnotation(SimpleMarshaller)
     if (!sm) {
       return
     }
+
+    log.info ("... registering ${clazz}")
 
     Set properties = CollectionUtil.buildHashSet(sm.includes())
 
