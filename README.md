@@ -9,7 +9,7 @@ Installation:
 ```
   plugins {
 ...
-    compile ':simple-marshaller:0.1.3'
+    compile ':simple-marshaller:0.1.4'
 ...
   }
 ```
@@ -102,6 +102,7 @@ Apache 2 License - http://www.apache.org/licenses/LICENSE-2.0
 History:
 --------------
 ```
+0.1.4 - tweak logging
 0.1.3 - add logging to register
 0.1.2 - fix plugin startup
 0.1.1 - cleanup println

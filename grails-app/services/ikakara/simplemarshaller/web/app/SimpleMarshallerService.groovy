@@ -31,7 +31,7 @@ class SimpleMarshallerService {
       return
     }
 
-    log.info ("... registering ${clazz}")
+    log.info ("Registering ${clazz.simpleName} ...")
 
     Set properties = CollectionUtil.buildHashSet(sm.includes())
 

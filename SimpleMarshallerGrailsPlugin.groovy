@@ -1,7 +1,7 @@
 import ikakara.simplemarshaller.web.app.SimpleMarshallerService
 
 class SimpleMarshallerGrailsPlugin {
-  def version = "0.1.3"
+  def version = "0.1.4"
   def grailsVersion = "2.2 > *"
   def pluginExcludes = [
     "**/test/**"
@@ -24,9 +24,9 @@ class SimpleMarshallerGrailsPlugin {
 
       classes.each {
         if(it) {
-          println "Registering ${it} ..."
+          println "Registering ${it.simpleName} ..."
           simpleMarshallerService.register(it)
-          println "... finished registering ${it}"
+          println "... finished registering ${it.simpleName}"
         }
       }
     }
