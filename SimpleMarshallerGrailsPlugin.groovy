@@ -1,7 +1,7 @@
 import ikakara.simplemarshaller.web.app.SimpleMarshallerService
 
 class SimpleMarshallerGrailsPlugin {
-  def version = "0.1.4"
+  def version = "0.1.5"
   def grailsVersion = "2.2 > *"
   def pluginExcludes = [
     "**/test/**"

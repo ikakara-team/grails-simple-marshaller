@@ -9,7 +9,7 @@ Installation:
 ```
   plugins {
 ...
-    compile ':simple-marshaller:0.1.4'
+    compile ':simple-marshaller:0.1.5'
 ...
   }
 ```
@@ -93,7 +93,7 @@ Plugin Developers can register their classes in {{Your}}GrailsPlugin.groovy
 
 Copyright & License:
 --------------
-Copyright 2014-2015 Allen Arakaki.  All Rights Reserved.
+Copyright 2014-2015 the original author or authors.
 
 ```
 Apache 2 License - http://www.apache.org/licenses/LICENSE-2.0
@@ -102,6 +102,7 @@ Apache 2 License - http://www.apache.org/licenses/LICENSE-2.0
 History:
 --------------
 ```
+0.1.5 - update copyright
 0.1.4 - tweak logging
 0.1.3 - add logging to register
 0.1.2 - fix plugin startup
